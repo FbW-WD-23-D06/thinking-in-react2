@@ -5,7 +5,7 @@ import Header from "./Header";
 import booksMockData from "../mocks/books";
 import { About } from "./About";
 import { Footer } from "./Footer";
-import { Books } from './Books';
+import { Books } from './Books/Books';
 
 function App() {
   const [books, setBooks] = useState(booksMockData);
@@ -67,9 +67,10 @@ function App() {
 
       <Header title="By React" />
 
-      <Books 
+      <Books
       books={books}
       tabItems={tabItems}
+      selectedFilter={selectedFilter}
       />
 
       <About />
